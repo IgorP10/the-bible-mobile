@@ -1,8 +1,13 @@
 <template>
   <v-list-item class="recent-reading-item">
-    <v-list-item-avatar>
-      <v-icon color="primary">mdi-book-open</v-icon>
-    </v-list-item-avatar>
+    <!-- Slot prepend para o ícone -->
+    <template v-slot:prepend>
+      <v-list-item-avatar class="item-avatar">
+        <v-icon color="primary bold">mdi-book-open</v-icon>
+      </v-list-item-avatar>
+    </template>
+
+    <!-- Conteúdo: título e subtítulo -->
     <v-list-item-content>
       <v-list-item-title class="font-weight-bold">
         {{ title }}
@@ -33,16 +38,17 @@ export default defineComponent({
 <style scoped>
 .recent-reading-item {
   margin-bottom: 8px;
-  /* Ajuste para dispositivos móveis */
 }
 
 .v-list-item {
   padding: 8px 16px;
-  /* Ajuste o padding para melhor visualização */
 }
 
-.v-list-item-content {
-  overflow: hidden;
-  /* Garante que o conteúdo não passe os limites */
+.v-icon {
+  font-size: 32px;
+}
+
+.item-avatar {
+  margin-right: 16px;
 }
 </style>
