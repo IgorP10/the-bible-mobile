@@ -19,7 +19,7 @@
     <v-main class="pt-0">
       <v-container>
         <!-- Slide Versículos -->
-        <v-card class="mb-6 verse-card">
+        <v-card class="mb-6" color="customColor">
           <v-card-title class="text-h5 text-primary">
             Verse of the Day
           </v-card-title>
@@ -42,7 +42,7 @@
         </v-row>
 
         <!-- Leituras Recentes -->
-        <v-card class="pa-4 recent-card">
+        <v-card class="pa-4" color="customColor">
           <v-card-title class="text-h5 text-primary">
             Recent Readings
           </v-card-title>
@@ -100,13 +100,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.verse-card {
-  background-color: #2c3a4e;
-}
-
-.recent-card {
-  background-color: #2c3a4e;
-}
-</style>

@@ -1,5 +1,10 @@
 <template>
-  <v-btn class="quick-access-button" :icon="true" @click="handleClick">
+  <v-btn
+    class="quick-access-button"
+    color="customColor"
+    :icon="true"
+    @click="handleClick"
+  >
     <v-icon color="primary">{{ icon }}</v-icon>
     <span>{{ label }}</span>
   </v-btn>
@@ -37,7 +42,6 @@ export default defineComponent({
   width: 100%; /* Garante que o botão ocupe a largura total disponível */
   min-height: 80px; /* Ajuste o tamanho mínimo conforme necessário */
   border-radius: 5px;
-  background-color: #2c3a4e;
 }
 
 .quick-access-button v-icon {

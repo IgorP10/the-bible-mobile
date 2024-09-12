@@ -1,40 +1,46 @@
-// Styles
+// vuetify.ts
+
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
+import { createVuetify, useTheme } from "vuetify";
 
-// Vuetify
-import { createVuetify } from "vuetify";
-
-export default createVuetify({
+// Criar uma instância do Vuetify
+const vuetify = createVuetify({
   theme: {
     defaultTheme: "dark",
     themes: {
       dark: {
         dark: true,
         colors: {
-          primary: "#FFD700",
-          secondary: "#424242",
-          accent: "#82B1FF",
-          error: "#FF5252",
-          info: "#2196F3",
-          success: "#4CAF50",
-          warning: "#FFC107",
-          background: "#1f2937",
+          primary: "#FFD700", // Gold
+          secondary: "#424242", // Dark Gray
+          accent: "#82B1FF", // Light Blue
+          error: "#FF5252", // Red
+          info: "#2196F3", // Blue
+          success: "#4CAF50", // Green
+          warning: "#FFC107", // Amber
+          background: "#1f2937", // Dark Gray
+          customColor: "#2c3a4e",
+          headerBackground: "#293647",
         },
       },
       light: {
         dark: false,
         colors: {
-          primary: "#1976D2",
-          secondary: "#424242",
-          accent: "#82B1FF",
-          error: "#FF5252",
-          info: "#2196F3",
-          success: "#4CAF50",
-          warning: "#FFC107",
+          primary: "#1f2937", // Light Gold (brighter version of dark primary)
+          secondary: "#B0BEC5", // Light Gray
+          accent: "#03A9F4", // Sky Blue (lighter version of dark accent)
+          error: "#FF5252", // Red
+          info: "#2196F3", // Blue
+          success: "#4CAF50", // Green
+          warning: "#FFC107", // Amber
+          background: "#E0E0E0", // Light Gray (for background)
+          customColor: "#CFD8DC",
+          headerBackground: "#CFD8DC",
         },
       },
     },
   },
 });
-// https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+
+export { vuetify, useTheme };
